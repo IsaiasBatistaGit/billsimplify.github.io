@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Bill Simplify</title>
+    <meta name="description" content="Get help with Bill Simplify app. FAQ, troubleshooting, and customer support for your bill analysis needs.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .support-content {
+            padding: 80px 0;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .support-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .support-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .support-card .icon {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: #667eea;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-method {
+            padding: 1.5rem;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-method:hover {
+            border-color: #667eea;
+        }
+
+        .contact-method .icon {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .contact-method a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-method a:hover {
+            color: #667eea;
+        }
+
+        .troubleshooting {
+            background: #f8f9ff;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+
+        .troubleshooting h3 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .troubleshooting ol {
+            padding-left: 1.5rem;
+        }
+
+        .troubleshooting li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">📱 Bill Simplify</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>How Can We Help?</h1>
+            <p>Find answers to common questions and get the support you need</p>
+        </div>
+    </section>
+
+    <section class="support-content">
+        <div class="container">
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Frequently Asked Questions</h3>
+                    <p>Find quick answers to the most common questions about Bill Simplify features, billing, and troubleshooting.</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Troubleshooting</h3>
+                    <p>Step-by-step guides to resolve common issues with scanning, analysis, and account management.</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Contact Support</h3>
+                    <p>Can't find what you're looking for? Reach out to our support team for personalized assistance.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        How does Bill Simplify analyze my bills?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Bill Simplify uses advanced AI technology powered by OpenAI's Vision API to analyze your bill images. The AI examines every line item, identifies potential billing errors, duplicate charges, and suspicious fees, then calculates potential savings opportunities.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Is my financial data secure?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, absolutely. We use Apple Sign In for authentication and store your data securely in Apple's CloudKit with end-to-end encryption. Your bill images and analysis results are private and only accessible to you. We never share your financial information with third parties.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        What types of bills can I scan?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Bill Simplify can analyze virtually any type of bill including medical bills, utility bills, credit card statements, subscription services, insurance claims, phone bills, and more. Our AI is trained to understand various billing formats and identify potential issues across different industries.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        How many bills can I scan with the free version?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        The free version allows you to scan 2 bills per month with basic analysis and standard dispute letter generation. Premium subscribers get unlimited scans, advanced AI analysis, fraud detection, PDF export, and priority support.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        How accurate are the dispute letters?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Our AI generates professional, legally-sound dispute letters based on the specific issues found in your bills. The letters follow industry best practices and include all necessary details for effective dispute resolution. Premium users get access to enhanced letter templates and customization options.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Can I cancel my subscription anytime?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, you can cancel your subscription at any time through your Apple App Store account settings. Your subscription will remain active until the end of the current billing period, and you'll continue to have access to premium features until then.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        What should I do if the app can't read my bill?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        If the app has trouble reading your bill, try these steps: 1) Ensure good lighting when taking the photo, 2) Hold the camera steady and make sure the bill is flat, 3) Check that all text is clearly visible and not blurry, 4) Try rescanning with better positioning. If issues persist, contact our support team.
+                    </div>
+                </div>
+            </div>
+
+            <div class="troubleshooting">
+                <h3>Common Troubleshooting Steps</h3>
+                <ol>
+                    <li><strong>App won't open:</strong> Restart your device and try again. Ensure you have the latest version of the app.</li>
+                    <li><strong>Scanning issues:</strong> Check camera permissions in Settings > Privacy > Camera > Bill Simplify.</li>
+                    <li><strong>Analysis taking too long:</strong> Check your internet connection. Analysis requires a stable connection to our AI servers.</li>
+                    <li><strong>Can't sign in:</strong> Ensure Apple Sign In is enabled in Settings > Apple ID > Sign-In & Security.</li>
+                    <li><strong>Subscription issues:</strong> Check your App Store account and payment method. Contact Apple Support for billing questions.</li>
+                    <li><strong>App crashes:</strong> Force close the app, restart your device, and ensure you have sufficient storage space.</li>
+                </ol>
+            </div>
+
+            <div class="contact-section">
+                <h2>Still Need Help?</h2>
+                <p>Our support team is here to help you get the most out of Bill Simplify</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Support</h4>
+                        <a href="mailto:support@billsimplify.app">support@billsimplify.app</a>
+                        <p>Response within 24 hours</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4>Report a Bug</h4>
+                        <a href="mailto:bugs@billsimplify.app">bugs@billsimplify.app</a>
+                        <p>Help us improve the app</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Feature Requests</h4>
+                        <a href="mailto:feedback@billsimplify.app">feedback@billsimplify.app</a>
+                        <p>Share your ideas with us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:support@billsimplify.app">Contact</a>
+            </div>
+            <p>&copy; 2024 Bill Simplify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('i');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all other answers
+                document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                    activeAnswer.classList.remove('active');
+                    activeAnswer.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                });
+                
+                answer.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
